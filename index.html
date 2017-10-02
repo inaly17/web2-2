@@ -5,9 +5,9 @@
   <title>初めてのjQuery</title>
   <script　typw="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript">
-    $(function(){
-      $("#toggle").on("click",function(){
-        $("#target").fadeToggle("slow");
+    $(document).ready(function(){
+      $("p").click(function(){
+        $("p").fadeOut("slow");
       });
     });
     
@@ -15,8 +15,9 @@
   </script>
 </head>
 <body>
-  <div id="target">表示・非表示される要素</div>
-  <button id="toggle">切り替え</button>
+  <p>
+    クリック
+  </p>
 </body>
 </html>
 
