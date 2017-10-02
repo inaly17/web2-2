@@ -1,35 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script src="/jquery/js/jquery.js"></script>
-  
-  <script>
-  $(document).ready(function(){
-    // Using multiple unit types within one animation.
-    $("#go").click(function(){
-      $("#block").animate({ 
-        width: "70%",
-        opacity: 0.4,
-        marginLeft: "0.6in",
-        fontSize: "3em", 
-        borderWidth: "10px"
-      }, 1500 );
+  <meta chartset="UTF-8">
+  <title>初めてのjQuery</title>
+  <script　typw="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript">
+    $(function(){
+      $("#toggle").on("click",function(){
+        $("#target").fadeToggle("slow");
+      });
     });
-
-  });
+    
+    
   </script>
-  <style>
-  div { 
-    background-color:#bca; 
-    width:100px; 
-    border:1px solid green;
-  }
-  </style>
 </head>
 <body>
-  <button id="go">? Run</button>
-
-  <div id="block">Hello!</div>
+  <div id="target">表示・非表示される要素</div>
+  <button id="toggle">切り替え</button>
 </body>
 </html>
-            
+
